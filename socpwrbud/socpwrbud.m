@@ -481,8 +481,8 @@ static void sample(unit_data* unit_data, cmd_data* cmd_data) {
     CFRelease(cpusamp_b);
     CFRelease(pwrsamp_a);
     CFRelease(pwrsamp_b);
-    CFRelease(clpcsamp_a);
-    CFRelease(clpcsamp_b);
+    //CFRelease(clpcsamp_a);
+    //CFRelease(clpcsamp_b);
     
     IOReportIterate(cpu_delta, ^int(IOReportSampleRef sample) {
         for (int i = 0; i < IOReportStateGetCount(sample); i++) {
@@ -639,7 +639,7 @@ static void sample(unit_data* unit_data, cmd_data* cmd_data) {
     
     CFRelease(cpu_delta);
     CFRelease(pwr_delta);
-    CFRelease(clpc_delta);
+    //CFRelease(clpc_delta);
 }
 
 static void format(unit_data* unit_data) {
